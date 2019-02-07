@@ -5,11 +5,14 @@
  */
 package com.mycompany.baigiamasisdarbas;
 
-// KS (kuro sanaudos 100km) = (V(ipilta kuro L) * 100) / S (nuvaziuotas kelias)
-public class KuroSanaudos {
-    
-    public double naudotasKuras(double V, double S) {
-        double ks = (V * 100) / S;
-        return ks;
+/**
+ *
+ * @author nijol
+ */
+public class MainApp {
+    public static void main(String[] args) {
+        
+        
+        
     }
 }

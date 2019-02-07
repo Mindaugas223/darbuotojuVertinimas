@@ -3,17 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.baigiamasisdarbas;
+package com.mycompany.baigiamasisdarbas.duomenys;
+
+import com.mycompany.baigiamasisdarbas.modelis.Vairuotojas;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  *
  * @author nijol
  */
-public class VairuotojuSarasas {
-    
-    public List<Vairuotojas> gautiDuomenis() {
-        List<Vairuotojas> duomenys = new ArrayList<Vairuotojas>();
+public class LaikiniDuomenys implements DuomenuTiekejas {
+
+    private List<Vairuotojas> duomenys = new ArrayList<>();
+
+    public LaikiniDuomenys() {
         duomenys.add(new Vairuotojas("Petras", "Gendolfinis", 164.0, 13465.2, 3500.0));
         duomenys.add(new Vairuotojas("Jonas", "Kapitalizmas", 143.0, 11211.7, 3101.6));
         duomenys.add(new Vairuotojas("Kazys", "Kiaušspyris", 171.1, 14113.2, 3842.4));
@@ -24,8 +28,11 @@ public class VairuotojuSarasas {
         duomenys.add(new Vairuotojas("Ona", "Kukulienė", 167.5, 15366.9, 4125.8));
         duomenys.add(new Vairuotojas("Alisa", "Pergalė", 100.0, 8542.8, 2164.5));
         duomenys.add(new Vairuotojas("Norbertas", "Žvejys", 169.5, 16458.1, 3993.4));
-        return duomenys;
-        
-        //pasidaryti, kad is cia kazkaip butu panaudota info i KuroSanaudos klase
     }
+
+    @Override
+    public List<Vairuotojas> gautiVairuotojus() {
+        return duomenys;
+    }
+
 }
