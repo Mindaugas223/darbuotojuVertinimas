@@ -77,7 +77,9 @@ public class NaudingumoSkaic {
     
     
     public double skaiciuok(Vairuotojas v, List<Vairuotojas> vairuotojai){
-        return (valanduDedamoji(v) + dV) * (kelioDedamoji(v, vairuotojai) + dKM) * (kuroDedamoji(v, vairuotojai) + dK);
+        double balas = (valanduDedamoji(v) + dV) * (kelioDedamoji(v, vairuotojai) + dKM) * (kuroDedamoji(v, vairuotojai) + dK);
+        v.setBalas(balas);
+        return balas;
     }
     
     // *V = 164 / (164 + abs(164 - val))

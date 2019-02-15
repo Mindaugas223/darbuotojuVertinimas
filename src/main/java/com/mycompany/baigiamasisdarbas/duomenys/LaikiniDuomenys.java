@@ -34,5 +34,5 @@ public class LaikiniDuomenys implements DuomenuTiekejas {
     public List<Vairuotojas> gautiVairuotojus() {
         return duomenys;
     }
-
+    
 }

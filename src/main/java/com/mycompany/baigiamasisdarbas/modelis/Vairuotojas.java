@@ -16,6 +16,15 @@ public class Vairuotojas {
     private double darboValandosSiMen;
     private double nuvaziuotiKm;
     private double sunaudotaKuroL;
+    private double balas;
+
+    public double getBalas() {
+        return balas;
+    }
+
+    public void setBalas(double balas) {
+        this.balas = balas;
+    }
 
     public Vairuotojas(String vardas, String pavarde, double darboValandosSiMen, double nuvaziuotiKm, double sunaudotaKuroL) {
         this.vardas = vardas;
@@ -65,5 +74,9 @@ public class Vairuotojas {
     public void setSunaudotaKuroL(double sunaudotaKuroL) {
         this.sunaudotaKuroL = sunaudotaKuroL;
     }
-
+    
+    @Override
+    public String toString() {
+        return " " + vardas + " " + pavarde + " " + darboValandosSiMen + " " + nuvaziuotiKm + " " + sunaudotaKuroL + " " + balas;
+    }
 }
